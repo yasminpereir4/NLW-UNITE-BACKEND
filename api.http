@@ -1,0 +1,30 @@
+POST http://localhost:3333/events
+Content-Type: application/json
+
+{
+  "title":123,
+  "details": null,
+  "maximumAttendes": 5
+}
+
+###
+
+POST  http://localhost:3333/events/7a347ec5-3468-4bce-909f-7bdd5467e5a2/attendees
+Content-Type: application/json
+
+{
+  "name": "Yasmin Mota",
+  "email": "yasmin@mota.com"
+}
+
+###
+
+GET http://localhost:3333/events/7a347ec5-3468-4bce-909f-7bdd5467e5a2
+
+###
+GET http://localhost:3333/attendees/1/badge
+###
+GET http://localhost:3333/attendees/1/check-in
+###
+
+GET http://localhost:3333/events/7a347ec5-3468-4bce-909f-7bdd5467e5a2/attendees?query=yasmin
